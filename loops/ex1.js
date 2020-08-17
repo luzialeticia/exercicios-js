@@ -2,7 +2,7 @@
 três e que se encontram no conjunto dos números de 1 até 500. */
 
 var soma = 0
-var i = 1
+var i = 3
 
 /*while (i <= 500) {
     if (i%2!==0 && i%3===0) {
@@ -14,10 +14,10 @@ var i = 1
 
 //console.log(i) */
 
-for (i <= 500; i++;) {
+for (i <= 500; i+3;) {
     if (i%2!==0 && i%3===0) {
         soma = soma + i
-        i++
+        i+3
         console.log(soma)
     }
 }
