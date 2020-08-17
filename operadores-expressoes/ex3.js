@@ -18,4 +18,4 @@ console.log(`O total arrecadado no dia foi de R$ ${(paes*0.12)+(broas*1.50)}.`)
 
 //const porcentagem = (totalVendidos /10*100).toFixed(2)
 
-console.log(`O valor que você deverá guardar na poupança é R$ ${((paes*0.12)+(broas*1.50)*(10.00/100.00)).toFixed(2)}`)
+console.log(`O valor que você deverá guardar na poupança é R$ ${(((paes*0.12)+(broas*1.50))*(10.00/100.00)).toFixed(2)}`)
