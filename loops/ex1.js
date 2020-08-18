@@ -17,7 +17,8 @@ var i = 3
 for (i <= 500; i+3;) {
     if (i%2!==0 && i%3===0) {
         soma = soma + i
-        i+3
+        //i+3
         console.log(soma)
     }
+    i+3
 }
