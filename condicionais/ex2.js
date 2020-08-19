@@ -21,26 +21,23 @@ const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB p
             console.log("Digite uma opção válida");
     }
 
-const estadoCivil = input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
-   switch(estadoCivil) {
-        case "S":
-            console.log("Solteire");
-            break;
-        case "C":
-            console.log("Casade");
-            break;
-        case "V":
-            console.log("Viúve");
-            break;
-        case "D":
-            console.log("Divorciade");
-            break;
-        case "O":
-            console.log("Outro");
-            break;
-        default:
-            console.log("Digite uma opção válida");
-   }
+//Ver colocar funções que retornem o estado civil por extenso nas variáveis a seguir:
+/*const estadoCivil = input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
+        switch(str) {
+                case "S":
+                    return "Solteire";
+                case "C":
+                    return "Casade";
+                case "V":
+                    return "Viúve";
+                case "D":
+                    return "Divorciade";
+                case "O":
+                    return "Outro";
+                default:
+                    return "Digite uma opção válida";
+        }
+}*/
 
 if (sexo === "F" && estadoCivil === "C") {
     const tempo = parseInt(input.question('Tempo de casada: '))
