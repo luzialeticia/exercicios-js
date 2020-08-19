@@ -21,7 +21,7 @@ const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB p
             console.log("Digite uma opção válida");
     }
 
-//Ver colocar funções que retornem o estado civil por extenso nas variáveis a seguir:
+//Corrigir
 const estadoCivil = () => {
     input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
         switch(estadoCivil) {
