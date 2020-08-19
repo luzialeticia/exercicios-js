@@ -7,14 +7,18 @@ const nome = input.question('Nome: ')
     console.log(nome)
 
 const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB para Não-binárie): ')
-    if (sexo === "F") {
-        console.log("Feminino")
-    }else if (sexo === "M") {
-        console.log("Masculino")
-    }else if (sexo === "NB") {
-        console.log("Não-binárie")
-    }else {
-        console.log("Digite uma opção válida")
+    switch(sexo) {
+        case "F":
+            console.log("Feminino");
+            break;
+        case "M": 
+            console.log("Masculino");
+            break;
+        case "NB": 
+            console.log("Não-binárie");
+            break;
+        default: 
+            console.log("Digite uma opção válida");
     }
 
 const estadoCivil = input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
