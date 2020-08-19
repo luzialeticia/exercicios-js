@@ -9,8 +9,9 @@ const nome = input.question('Nome: ')
 const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB para Não-binárie): ')
     switch(sexo) {
         case "F":
-            console.log("Feminino");
-            break;
+            console.log("FEminino");
+            return "Feminino";
+            //break;
         case "M": 
             console.log("Masculino");
             break;
@@ -21,7 +22,7 @@ const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB p
             console.log("Digite uma opção válida");
     }
 
-//Corrigir
+/*Corrigir
 function estadoCivil () {
 
     input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
@@ -39,7 +40,7 @@ function estadoCivil () {
             default:
                 return "Digite uma opção válida";
         }
-}
+}*/
 
 if (sexo === "F" && estadoCivil === "C") {
     const tempo = parseInt(input.question('Tempo de casada: '))
