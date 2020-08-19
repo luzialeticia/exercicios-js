@@ -22,18 +22,24 @@ const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB p
     }
 
 const estadoCivil = input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
-   if (estadoCivil === "S") {
-       console.log("Solteire")
-   }else if (estadoCivil === "C") {
-        console.log("Casade")
-   }else if (estadoCivil === "V") {
-       console.log("Viúve")
-   }else if (estadoCivil === "D") {
-    console.log("Divorciade")
-   }else if (estadoCivil === "O") {
-    console.log("Outro")
-   }else {
-    console.log("Digite uma opção válida")
+   switch(estadoCivil) {
+        case "S":
+            console.log("Solteire");
+            break;
+        case "C":
+            console.log("Casade");
+            break;
+        case "V":
+            console.log("Viúve");
+            break;
+        case "D":
+            console.log("Divorciade");
+            break;
+        case "O":
+            console.log("Outro");
+            break;
+        default:
+            console.log("Digite uma opção válida");
    }
 
 if (sexo === "F" && estadoCivil === "C") {
