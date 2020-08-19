@@ -22,7 +22,8 @@ const sexo = input.question('Gênero (F para feminino, M para masculino, ou NB p
     }
 
 //Corrigir
-const estadoCivil = () => {
+function estadoCivil () {
+
     input.question('Estado civil (S para solteire, C para casade, V para viúve, D para divorciade, O para outro): ')
         switch(estadoCivil) {
             case "S":
@@ -44,5 +45,5 @@ if (sexo === "F" && estadoCivil === "C") {
     const tempo = parseInt(input.question('Tempo de casada: '))
     console.log(`${nome} tem ${tempo} anos de casada.`)
 }else {
-    console.log(`${nome} é do gênero ${sexo} e seus estado civil é ${estadoCivil}.`)
+    console.log(`${nome} é do gênero ${sexo} e seu estado civil é ${estadoCivil}.`)
 }
