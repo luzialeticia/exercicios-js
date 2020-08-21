@@ -5,6 +5,8 @@ DIAS */
 
 const input = require('readline-sync')
 
-const nome = input.question('Nome :')
+const nome = input.question('Nome: ')
 const idade = parseInt(input.question('Idade: '))
 const diasVida = idade * 365
+
+console.log(`${nome}, você já viveu ${diasVida}.`)
