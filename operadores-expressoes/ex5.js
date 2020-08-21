@@ -4,3 +4,8 @@ tanque.*/
 
 const input = require('readline-sync')
 
+const precoLitro = parseFloat(input.question('Valor da gasolina (litro): ')).toFixed(2)
+const valorPagamento = parseFloat(input.question('Valor a pagar: ')).toFixed(2)
+const litros = valorPagamento / precoLitro
+
+console.log(`R$ ${valorPagamento} equivale a ${litros} litros de gasolina.`)
