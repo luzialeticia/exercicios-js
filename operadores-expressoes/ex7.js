@@ -4,6 +4,7 @@ ano. Esqueça a questão dos anos bissextos e considere sempre que um mês possu
 const input = require('readline-sync')
 
 const dia = parseInt(input.question("Dia: "))
-const mes = parseInt(input.question("Mês: "))
-const diasMes = 30
-const diasAno = 365
+const mes = parseInt(input.question("Mês (em nº): "))
+const diasPassados = 30 * (mes - 1) + dia
+
+console.log(`Já se passaram ${diasPassados} dias do ano de 2020.`)
