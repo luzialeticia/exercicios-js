@@ -5,3 +5,5 @@ const input = require('readline-sync')
 
 const dia = parseInt(input.question("Dia: "))
 const mes = parseInt(input.question("Mês: "))
+const diasMes = 30
+const diasAno = 365
