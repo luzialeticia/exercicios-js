@@ -4,3 +4,11 @@ negativos e o percentual de valores negativos e positivos. */
 
 const input = require('readline-sync')
 
+let valores = []
+const parar = "p"
+let i = 0
+
+while (i !== "p") {
+    i = parseInt(input.question("Digite um valor ou 'p' para sair: "))
+    valores.push(i)
+}
