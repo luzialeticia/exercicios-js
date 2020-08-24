@@ -8,7 +8,6 @@ let valores = []
 const parar = "p"
 let i = 0
 
-while (i !== "p") {
-    i = parseInt(input.question("Digite um valor ou 'p' para sair: "))
-    valores.push(i)
+if (i !== "p") {
+
 }
