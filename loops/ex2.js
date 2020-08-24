@@ -8,7 +8,7 @@ const input = require('readline-sync')
 let alturas = []
 
 for (let i = 1; i <= 15; i++) {
-    let altura = parseFloat(input.question("Digite a altura: ")).toFixed(2)
+    let altura = parseFloat(input.question("Digite a altura em metros: ")).toFixed(2)
     alturas.push(altura)
 }
-console.log(alturas)
+console.log(`A menor altura do grupo é ${Math.min.apply(null, alturas)} metros.\nE a maior altura é ${Math.max.apply(null, alturas)} metros.`)
