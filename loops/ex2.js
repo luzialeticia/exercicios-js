@@ -8,7 +8,7 @@ const input = require('readline-sync')
 let alturas = []
 
 for (let i = 1; i <= 15; i++) {
-    let altura = parseFloat(input.question("Digite a altura: "))
+    let altura = parseFloat(input.question("Digite a altura: ")).toFixed(2)
     alturas.push(altura)
 }
 console.log(alturas)
