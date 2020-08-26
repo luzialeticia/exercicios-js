@@ -1,0 +1,1 @@
+// Faça um algoritmo que imprima a soma dos números múltiplos de 3 e 5, menores que 1000.
