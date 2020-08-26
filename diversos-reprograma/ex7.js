@@ -5,7 +5,6 @@ const input = require('readline-sync')
 
 let num = parseInt(input.question("Digite um nº inteiro: "))
 
-while (num >= 1) {
-    num = num--
-    console.log(num)
+for(let i = num; i >= 1; i--) {
+    console.log(i)
 }
