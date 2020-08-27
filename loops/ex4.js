@@ -13,7 +13,7 @@ let num = Number(input.question("Digite um nº inteiro ou um nº negativo para s
 
 if (num < 0) {
     console.log("saindo")
-}else if (num <= 25) {
+}else if (num <= 0 && num <= 25) {
     while (num <= 25) {
         num = Number(input.question("Digite um nº inteiro ou um nº negativo para sair: "))
         num0a25.push(num)
