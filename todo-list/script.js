@@ -4,8 +4,8 @@ let input = prompt("What would you like to do?")
 
 while(input !== "quit") {
     if(input === "list") {
-        todos.forEach(function (todo, index){
-            console.log(index + todo)
+        todos.forEach(function print(todo, index){
+            console.log(`${index}: ${todo}`)
         })
     } else if(input === "new") {
         let newTodo = prompt("Enter new todo")
