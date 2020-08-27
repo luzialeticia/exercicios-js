@@ -5,9 +5,19 @@ negativos e o percentual de valores negativos e positivos. */
 const input = require('readline-sync')
 
 let valores = []
-const parar = "p"
+//const parar = "p"
 let i = 0
+const soma = valores.reduce((accumulator, currentItem) => {
+    return (accumulator + currentItem)///valores.length
+}, 0)
 
-if (i !== "p") {
+let valor = parseInt(input.question("Digite um valor: "))
 
+while (valor >= 0) {
+    valor = parseInt(input.question("Digite um valor: "))
+    valores.push(valor)
+    if (valor < 0) {
+        console.log(valores)
+    }
 }
+console.log(soma)
