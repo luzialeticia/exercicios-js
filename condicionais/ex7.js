@@ -3,11 +3,14 @@ imprimir o resultado desta operação. */
 
 const input = require('readline-sync')
 
-let num = parseInt(input.question("Digite um nº inteiro: "))
-
-if (num%2===0) {
-    num = num + 5
-} else if (num%2!==0) {
-    num = num + 8
+function soma(numero) {
+    if (numero%2===0) {
+        return numero = numero + 5
+    } else if (numero%2!==0) {
+        return numero = numero + 8
+    }
 }
-console.log(num)
+
+const num = parseInt(input.question("Digite um nº inteiro: "))
+
+console.log(soma(num))
