@@ -2,3 +2,7 @@
 calcule seu peso ideal, utilizando as seguintes fórmulas:
 ● para homens: (72.7 * h) – 58;
 ● para mulheres: (62.1 * h) – 44.7. */
+
+function pesoIdealH (h) {
+    
+}
