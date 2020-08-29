@@ -2,3 +2,9 @@
 vendida respectivamente por 10, 12 e 15 reais. Construa um algoritmo em que o usuário forneça a
 quantidade de camisetas pequenas, médias e grandes referentes a uma venda, e a máquina
 informe quanto será o valor arrecadado. */
+
+const input = require('readline-sync')
+
+const pequeno = parseInt(input.question("Quantas camisetas pequenas foram vendidas? "))
+const medio = parseInt(input.question("Quantas camisetas médias foram vendidas? "))
+const grande = parseInt(input.question("Quantas camisetas grandes foram vendidas? "))
