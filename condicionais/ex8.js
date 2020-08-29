@@ -2,9 +2,5 @@
 decrescente. */
 
 function ordem(a, b, c) {
-    if(a > b && a > c) {
-        return `${a}\n${b}\n${c}`
-    }else if(b > a && b > c) {
-        return `${b}\n${b}\n${c}`
-    }
+
 }
