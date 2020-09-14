@@ -15,6 +15,7 @@ do {
     sortComSlice = array.slice().sort((a, b) => b-a)
 
     maiorNum = sortComSlice[0]
+
 } while(numeros >= 0)
 
-console.log(maiorNum);
+console.log(`O maior nº no array é: ${maiorNum}`);
