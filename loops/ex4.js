@@ -7,27 +7,29 @@ const input = require('readline-sync')
 let num0a25 = []
 let num26a50 = []
 let num51a75 = []
-let num75a100 = []
+let num76a100 = []
 
-let num = Number(input.question("Digite um nº inteiro ou um nº negativo para sair: "))
+let num = parseInt(input.question("Digite um nº positivo para contar ou um nº negativo para sair: "))
 
-if (num < 0) {
-    console.log("saindo")
-}else if (num <= 0 && num <= 25) {
-    while (num <= 25) {
-        num = Number(input.question("Digite um nº inteiro ou um nº negativo para sair: "))
-        num0a25.push(num)
-    }
-}console.log(num0a25.length)
+while (num >=0) {
+    num = parseInt(input.question("Digite um nº positivo para contar ou um nº negativo para sair: "))
 
-/*for (let num = 0; num >= 0;) {
-    let num = Number(input.question("Digite um nº inteiro ou um nº negativo para sair: "))
-    if (num <= 25) {
-        num0a25.push(num)
+    switch(num) {
+        case num <= 25:
+            num0a25.push(num)
+            break
+        case num <= 50:
+            num26a50.push(num)
+            break
+        case num <= 75:
+            num51a75.push(num)
+            break
+        case num <= 100:
+            num76a100.push(num)
+            break
+        default:
+            break
     }
 }
 
-if (num < 0) {
-    console.log("saindo")
-}
-console.log(num0a25.length)*/
+console.log(num0a25.length)
