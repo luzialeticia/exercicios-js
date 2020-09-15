@@ -1,36 +1,20 @@
 /* 8) Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem
 decrescente. */
 
-//const input = require('readline-sync')
+const input = require('readline-sync')
 
-// const num1 = parseInt(input.question("Digite um nº inteiro para comparar: "))
-// const num2 = parseInt(input.question("Digite outro nº inteiro para comparar: "))
-// const num3 = parseInt(input.question("Digite o último nº inteiro para comparar: "))
+let array = []
 
-const ordem = (a, b, c) => {
-    switch(a, b, c) {
-        case a > b && b > c:
-            `A ordem decrescente é ${a}, ${b} e ${c}`
-            break
-        case a > c && c > b:
-            `A ordem decrescente é ${a}, ${c} e ${b}`
-            break
-        case b > a && a > c:
-            `A ordem decrescente é ${b}, ${a} e ${c}`
-            break
-        case b > c && c > a:
-            `A ordem decrescente é ${b}, ${c} e ${a}`
-            break
-        case c > a && a > b:
-            `A ordem decrescente é ${c}, ${a} e ${b}`
-            break
-        case c > b && b > a:
-            `A ordem decrescente é ${c}, ${b} e ${a}`
-            break
-        default:
-            `Os nºs são iguais.`
-            break
-    }
-}
+const num1 = parseInt(input.question("Digite um nº inteiro para comparar: "))
+const num2 = parseInt(input.question("Digite outro nº inteiro para comparar: "))
+const num3 = parseInt(input.question("Digite o último nº inteiro para comparar: "))
 
-console.log(ordem(2, 3, 4));
+array.push(num1)
+array.push(num2)
+array.push(num3)
+
+const arrayOrdenado = array.sort((a, b) => b - a)
+
+console.log(arrayOrdenado[0]);
+console.log(arrayOrdenado[1]);
+console.log(arrayOrdenado[2]);
