@@ -8,7 +8,6 @@ let num0a25 = []
 let num26a50 = []
 let num51a75 = []
 let num76a100 = []
-
 let num;
 
 do {
@@ -30,5 +29,5 @@ do {
         default:
             break
     }
-    
+
 } while (num >=0 && num <= 100) 
