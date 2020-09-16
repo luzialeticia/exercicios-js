@@ -9,27 +9,26 @@ let num26a50 = []
 let num51a75 = []
 let num76a100 = []
 
-let num = parseInt(input.question("Digite um nº positivo para contar ou um nº negativo para sair: "))
+let num;
 
-while (num >=0) {
+do {
     num = parseInt(input.question("Digite um nº positivo para contar ou um nº negativo para sair: "))
 
     switch(num) {
-        case num <= 25:
+        case num >= 0 && num <= 25:
             num0a25.push(num)
             break
-        case num <= 50:
+        case num > 25 && num <= 50:
             num26a50.push(num)
             break
-        case num <= 75:
+        case num > 50 && num <= 75:
             num51a75.push(num)
             break
-        case num <= 100:
+        case num > 75 && num <= 100:
             num76a100.push(num)
             break
         default:
             break
     }
-}
-
-console.log(num0a25.length)
+    
+} while (num >=0 && num <= 100) 
