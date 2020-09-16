@@ -6,31 +6,26 @@ const input = require('readline-sync')
 
 let valores = []
 let valor;
-let soma;
-let media;
-let negativos;
-let positivos;
-let quantNegativos;
-let quantPositivos;
-// let porcentagemNegativos;
-// let porcentagemPositivos;
+
 
 do {
-    valor = parseInt(input.question("Digite um nº inteiro ou S para sair: "))
+    valor = parseInt(input.question("Digite um nº inteiro ou 0 para sair: "))
     valores.push(valor)
 
-    negativos = valores.filter(item => item < 0)
-    quantNegativos = negativos.length
-
-    positivos = valores.filter(item => item > 0)
-    quantPositivos = positivos.length
-
-    soma = valores.reduce((accumulator, currentItem) => {
-        return (accumulator + currentItem)
-    },0)
 } while (valor !== 0)
 
-media = soma/(valores.length-1)
+
+let positivos = valores.filter(item => item > 0)
+let quantPositivos = positivos.length
+let porcentagemPositivos = (quantPositivos/(valores.length-1))*100
+
+let negativos = valores.filter(item => item < 0)
+let quantNegativos = negativos.length
+let porcentagemNegativos = (quantNegativos/(valores.length-1))*100
+
+let soma = valores.reduce((accumulator, currentItem) => (accumulator + currentItem), 0)
+
+let media = soma/(valores.length-1) //tem que ser valores.length - 1 pq o 0 entra como item do array
 
 
-console.log(media, quantPositivos, quantNegativos)
+console.log(`Média: ${media.toFixed(2)}\nQuantidade de nºs positivos: ${quantPositivos} - ${porcentagemPositivos.toFixed(1)}% dos itens.\nQuantidade de nº negativos: ${quantNegativos} - ${porcentagemNegativos.toFixed(1)}% dos itens.`)
