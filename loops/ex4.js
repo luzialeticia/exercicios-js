@@ -27,7 +27,10 @@ do {
             num76a100.push(num)
             break
         default:
+            console.log("Nº inválido.");
             break
     }
 
-} while (num >=0 && num <= 100) 
+    console.log(num0a25.length);
+
+} while (num >= 0) 
