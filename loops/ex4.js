@@ -4,6 +4,7 @@ terminar quando for lido um número negativo. */
 
 const input = require('readline-sync')
 
+
 let num0a25 = []
 let num26a50 = []
 let num51a75 = []
