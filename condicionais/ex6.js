@@ -2,4 +2,3 @@
 VERDADEIROS ou FALSOS. */
 
 const input = require('readline-sync')
-
