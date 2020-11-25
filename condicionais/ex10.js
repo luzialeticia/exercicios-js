@@ -11,7 +11,7 @@ Acima de 30 obeso */
 const input = require('readline-sync')
 
 const imc = (peso, altura) => {
-    return (peso/Math.pow(altura, 2)).toFixed(1)
+    return (peso/(altura*altura)).toFixed(1)
 }
 
 const calculaIMC = (funcaoCalculaIMC) => {
@@ -28,7 +28,5 @@ const calculaIMC = (funcaoCalculaIMC) => {
 
 const peso = parseFloat(input.question("Digite o peso: "))
 const altura = parseFloat(input.question("Digite a altura: "))
-
-imc(peso, altura)
 
 console.log(calculaIMC(imc(peso, altura)));
