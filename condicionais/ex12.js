@@ -21,5 +21,31 @@ const nota1 = parseFloat(input.question('Digite a 1ª nota: '))
 const nota2 = parseFloat(input.question('Digite a 2ª nota: '))
 const nota3 = parseFloat(input.question('Digite a 3ª nota: '))
 const ME = parseInt(input.question('Digite a média de exercícios da avaliação: '))
-const MA = (nota1 + nota2 * 2 + nota3 * 3 + ME)/7
+const MA = ((nota1 + nota2 * 2 + nota3 * 3 + ME)/7).toFixed(1)
+let conceito;
 
+switch(MA) {
+  case MA>=90:
+    conceito = 'A'
+    break
+  case MA>=75 && MA<90:
+    conceito = 'B'
+    break
+  case MA>=60 && MA<75:
+    conceito = 'C'
+    break
+  case MA>=40 && MA<60:
+    conceito = 'D'
+    break
+  case MA<40:
+    conceito = 'E'
+    break
+  default:
+    'Média inválida.'
+}
+
+if(conceito === 'A' || conceito === 'B' || conceito === 'C') {
+  console.log(`A média do aluno ID ${idAluno} é: ${MA}\nO aluno está APROVADO.`)
+} else {
+  console.log(`A média do aluno ID ${idAluno} é: ${MA}\nO aluno está REPROVADO.`)
+}
