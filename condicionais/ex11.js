@@ -11,4 +11,33 @@ Código Condição de pagamento
 const input = require('readline-sync')
 
 const precoNormal = parseFloat(input.question("Digite o valor do produto: R$ "))
-const condicaoPagamento = input.question("Qual a forma de pagamento?\nÀ vista em dinheiro ou cheque DIGITE 1\nÀ vista no cartão de crédito ou débito DIGITE 2\nParcelado em 2X DIGITE 3\nParcelado em 3x DIGITE4")
+const condicaoPagamento = parseInt(input.question("Qual a forma de pagamento?\n    À vista em dinheiro ou cheque DIGITE 1\n    À vista no cartão de crédito ou débito DIGITE 2\n    Parcelado em 2X DIGITE 3\n    Parcelado em 3x DIGITE 4\n"))
+let desconto;
+let juros;
+let precoFinal;
+let parcelas;
+
+switch(condicaoPagamento) {
+  case 1:
+    desconto = precoNormal*(10/100)
+    precoFinal = (precoNormal - desconto).toFixed(2)
+    console.log(`O total a pagar é R$${precoFinal} reais.`)
+    break
+  case 2:
+    desconto = precoNormal*(15/100)
+    precoFinal = (precoNormal - desconto.toFixed(2))
+    console.log(`O total a pagar é R$${precoFinal} reais.`)
+    break
+  case 3:
+    parcelas = (precoNormal/2).toFixed(2)
+    console.log(`O total a pagar é R$${precoNormal} reais. Em 2 parcelas de R$${parcelas} reais.`)
+    break
+  case 4:
+    juros = precoNormal*(10/100)
+    precoFinal = (precoNormal+juros).toFixed(2)
+    parcelas = (precoFinal/3).toFixed(2)
+    console.log(`O total a pagar é R$${precoFinal} reais, em 3 parcelas de R$${parcelas} reais.`)
+    break
+  default:
+    console.log("Opção de pagamento inválida.")
+}
